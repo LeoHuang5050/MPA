@@ -1,3 +1,5 @@
+"use client";
+
 import { CheckCircleIcon, DocumentDuplicateIcon } from "@heroicons/react/24/outline";
 import { useCopyToClipboard } from "~~/hooks/scaffold-eth/useCopyToClipboard";
 

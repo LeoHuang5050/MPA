@@ -330,7 +330,7 @@ const deployedContracts = {
       inheritedFunctions: {
         validateUserOp: "contracts/interfaces/IAccount.sol",
       },
-      deployedOnBlock: 49251797,
+      deployedOnBlock: 49273000,
     },
     MockDEX: {
       address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
@@ -513,7 +513,7 @@ const deployedContracts = {
         },
       ],
       inheritedFunctions: {},
-      deployedOnBlock: 49251789,
+      deployedOnBlock: 49272992,
     },
     MockERC20: {
       address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
@@ -872,7 +872,7 @@ const deployedContracts = {
         transfer: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
         transferFrom: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       },
-      deployedOnBlock: 49251791,
+      deployedOnBlock: 49272994,
     },
     QuotaSessionModule: {
       address: "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
@@ -1080,7 +1080,7 @@ const deployedContracts = {
       inheritedFunctions: {
         validateSession: "contracts/interfaces/IModule.sol",
       },
-      deployedOnBlock: 49251795,
+      deployedOnBlock: 49272998,
     },
   },
 } as const;
