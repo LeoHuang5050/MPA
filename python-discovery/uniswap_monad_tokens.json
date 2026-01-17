@@ -1,0 +1,26 @@
+[
+    {
+        "chainId": 10143,
+        "address": "0x760AfE86e5de5fa0Ee542fc7B7B713e1c5425701",
+        "name": "Wrapped Monad",
+        "symbol": "WMON",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/assets/wmon.svg"
+    },
+    {
+        "chainId": 10143,
+        "address": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+        "name": "AUSD",
+        "symbol": "AUSD",
+        "decimals": 6,
+        "logoURI": "https://dsvxs4ecepqgj.cloudfront.net/tokens/AUSD/logo.svg"
+    },
+    {
+        "chainId": 10143,
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+    }
+]

@@ -1,0 +1,6 @@
+flask
+flask-cors
+networkx
+requests
+web3
+websockets
