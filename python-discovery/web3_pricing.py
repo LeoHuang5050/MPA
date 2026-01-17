@@ -227,6 +227,14 @@ def get_kuru_quote(token_in, token_out, amount_in, decimals_in, decimals_out):
             
             factor = 10**(decimals_out - decimals_in)
             amount_out = (amount_in / price_factor) * factor
+            
+            # SANITY CHECK: If rate > 1000 (1000x profit), assume dust/error
+            if amount_in > 0:
+                implied_rate = amount_out / amount_in
+                if implied_rate > 1000:
+                   # print(f"DEBUG: Ignored absurd Kuru rate {implied_rate:.2f} for {t_in_lower}->{t_out_lower}")
+                   return 0
+            
             return int(amount_out)
 
     except Exception as e:
@@ -234,6 +242,11 @@ def get_kuru_quote(token_in, token_out, amount_in, decimals_in, decimals_out):
         import traceback
         traceback.print_exc()
         return 0
+
+    # Sanity Check for Output
+    # If standard stable pair implies > 10x deviation, ignore
+    # This prevents dust orders (e.g. ask=1wei) from creating fake arbitrage
+    return 0
 
 
 

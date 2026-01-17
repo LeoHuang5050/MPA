@@ -43,6 +43,17 @@ def load_token_map():
                     TOKEN_DECIMALS[sym] = dec
                     count += 1
             print(f"✅ Loaded {count} tokens from monad_tokens.json")
+            
+            # Sync with web3_pricing (Mock Environment overrides)
+            from web3_pricing import WMON_ADDR, USDC_ADDR
+            if WMON_ADDR: 
+                TOKEN_MAP["WMON"] = WMON_ADDR
+                ADDR_TO_SYM[WMON_ADDR.lower()] = "WMON"
+            if USDC_ADDR: 
+                TOKEN_MAP["USDC"] = USDC_ADDR
+                ADDR_TO_SYM[USDC_ADDR.lower()] = "USDC"
+                
+            print(f"🔄 Synced WMON/USDC from web3_pricing: {WMON_ADDR} / {USDC_ADDR}")
         else:
             print("⚠️ monad_tokens.json not found, using default fallback.")
             
@@ -154,7 +165,8 @@ def analyze_graph_for_tier(graph, tier_value, pool_info_map=None):
                 net_profit, gas_cost = calculate_net_profit(tier_value, profit_pct, gas_estimate=300000)
                 
                 # FILTER: Ignore results where loss exceeds principal (e.g. liquidity dry + gas)
-                if net_profit <= -tier_value:
+                # RELAXED for Debugging: Allow valid paths even if loss is high
+                if net_profit <= -tier_value * 10:
                     continue 
 
                 # Construct Detailed Path Log

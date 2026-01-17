@@ -1,0 +1,24 @@
+{
+  "total_scanned": 45,
+  "count": 0,
+  "tiers_scanned": [
+    1,
+    10,
+    100
+  ],
+  "best_by_tier": {
+    "1": null,
+    "10": null,
+    "100": null
+  },
+  "best": {
+    "token": "WMON",
+    "profit_pct": 0,
+    "net_profit_usd": 0,
+    "logs": [],
+    "strategy": "None",
+    "comparison": null
+  },
+  "ranking": [],
+  "total_time": 0.48534488677978516
+}
